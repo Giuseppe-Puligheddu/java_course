@@ -4,9 +4,9 @@ public class Dish {
     private String[] ingredients;
     
     public Dish(String name, String price, String[] ingredients) {
-        this.name = name;
-        this.price = price;
-        this.ingredients = ingredients;
+        this.setName(name);
+        this.setPrice(price);
+        this.setIngredients(ingredients);
     }
 
 
@@ -29,6 +29,15 @@ public class Dish {
         this.price = price;
     }
 
+    public String[] getIngredients() {
+        return ingredients;
+    }
+
+
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
+    }
+
     public void infoPiatto() {
         System.out.println("Piatto: " + name);
         System.out.println("Prezzo: " + price + "$ ");
@@ -38,5 +47,8 @@ public class Dish {
         }
         System.out.println();
     }
+
+
+    
 
 }
