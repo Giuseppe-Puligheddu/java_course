@@ -22,16 +22,16 @@ public class App {
 
         DocFactorySingleton factory = new DocFactorySingleton();
         
-        Bisturi bisturi = factory.instance(DocComponents.BisturiDx, Bisturi.class);
+        Bisturi bisturi = factory.instanceCasting(DocComponents.BisturiDx, Bisturi.class);
 
-        Forbici forbici = factory.instance(DocComponents.ForbiciSx, Forbici.class);
+        Forbici forbici = factory.instanceCasting(DocComponents.ForbiciSx, Forbici.class);
 
-        Gambe gambe = factory.instance(DocComponents.Gambe, Gambe.class);
+        Gambe gambe = factory.instanceCasting(DocComponents.Gambe, Gambe.class);
 
-        Gambe gambe2 = factory.instance(DocComponents.Gambe, Gambe.class);
+        Gambe gambe2 = factory.instanceCasting(DocComponents.Gambe, Gambe.class);
 
         //! Le due istanze di gambe puntano allo stesso riferimento così da non creare un nuovo oggetto e risparmiare più memoria
-        
+
         System.out.println(gambe);
         System.out.println(gambe2);
 
